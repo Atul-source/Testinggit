@@ -1,6 +1,6 @@
 # L3AFD Configuration Options Documentation
      The Configuration File : l3afd.cfg
-     ~~~ 
+     ''' 
      [DEFAULT]
 
 [l3afd]
@@ -59,6 +59,7 @@ enabled: true
 
 [l3af-configs]
 restapi-addr: localhost:53000
+'''
 
 [l3af-config-store]
 filename: "/etc/l3afd/l3af-config.json"
