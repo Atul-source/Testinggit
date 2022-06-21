@@ -1,3 +1,74 @@
 # L3AFD Configuration Options Documentation
      The Configuration File : l3afd.cfg
+     `[DEFAULT]
+
+[l3afd]
+pid-file: ./l3afd.pid
+datacenter: dummy
+bpf-dir: /dev/shm
+bpf-log-dir:
+kernel-major-version: 4
+kernel-minor-version: 15
+shutdown-timeout: 1s
+http-client-timeout: 10s
+max-nf-restart-count: 3
+max-nfs-attach-count: 10
+bpf-chaining-enabled: true
+bpf-delay-time: 5
+swagger-api-enabled: false
+# PROD | DEV
+environment: PROD
+
+[kf-repo]
+url:
+
+[web]
+metrics-addr: 0.0.0.0:8898
+kf-poll-interval: 30s
+n-metric-samples: 20
+
+[admind]
+host: 
+username: 
+api-key: 
+group-id: 0
+api-enabled: true
+
+
+[xdp-root-program]
+name: xdp-root
+artifact: xdp-root.tar.gz
+ingress-map-name: root_array
+command: xdp_root
+version: 1.01
+is-user-program: false
+
+[tc-root-program]
+name: tc_root
+artifact: l3af_tc_root.tar.gz
+ingress-map-name: /sys/fs/bpf/tc/globals/tc_ingress_root_array
+egress-map-name: /sys/fs/bpf/tc/globals/tc_egress_root_array
+command: tc_root
+version: 1.0
+is-user-program: false
+
+[ebpf-chain-debug]
+addr: 0.0.0.0:8899
+enabled: true
+
+[l3af-configs]
+restapi-addr: localhost:53000
+
+[l3af-config-store]
+filename: "/etc/l3afd/l3af-config.json"
+
+[mtls]
+enabled: true
+# TLS_1_2 or TLS_1_3
+min-tls-version:
+cert-dir: /etc/l3af/certs
+cacert-filename: ca.pem
+server-crt-filename: server.crt
+server-key-filename: server.key
+`
      
