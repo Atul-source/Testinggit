@@ -1,43 +1,28 @@
-# L3AFD API Documentation
+# L3AFD Config  Options Documentation
 
-See [payload.json](https://github.com/l3af-project/l3af-arch/blob/main/dev_environment/cfg/payload.json) for a full example payload.
+See [l3afd.cfg](https://github.com/l3af-project/l3afd/config/l3afd.cfg) for a full example configuration.
 
-The payload will look more like this standard JSON:
 
 ```
-[
-  {
-    "host_name" : "l3af-local-test",
-    "iface" : "enp0s3",
-    "bpf_programs" : {
-      "xdp_ingress" : [
-        {
-          "name": "ratelimiting",
-          "seq_id": 1,
-          "artifact": "l3af_ratelimiting.tar.gz",
-          "map_name": "/sys/fs/bpf/xdp_rl_ingress_next_prog",
-          "cmd_start": "ratelimiting",
-          "version": "latest",
-          "user_program_daemon": true,
-          "admin_status": "enabled",
-          "prog_type": "xdp",
-          "cfg_version": 1,
-          "start_args": { "ports": "8080,8081", "rate": "2" },
-          "monitor_maps": [
-            { "name": "rl_drop_count_map", "key": 0, "aggregator": "scalar"},
-            { "name": "rl_recv_count_map", "key": 0, "aggregator": "max-rate"}
-          ]
-        }
-        ],
-      "tc_ingress":[
-        {"...": "..."}
-        ],
-      "tc_egress": [
-        {"...":  "..."}
-      ]
-    }
-  }
-]
+[DEFAULT]
+
+[l3afd]
+pid-file: ./l3afd.pid
+datacenter: dummy
+bpf-dir: /dev/shm
+bpf-log-dir:
+kernel-major-version: 4
+kernel-minor-version: 15
+shutdown-timeout: 1s
+http-client-timeout: 10s
+max-nf-restart-count: 3
+max-nfs-attach-count: 10
+bpf-chaining-enabled: true
+bpf-delay-time: 5
+swagger-api-enabled: false
+# PROD | DEV
+environment: PROD
+....
 ```
 
 ### Below is the detailed documentation for each field
