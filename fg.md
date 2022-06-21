@@ -30,7 +30,9 @@ environment: PROD
 
 | FieldName     | Example       | Description     |
 | ------------- | ------------- | --------------- |
-|pid-file| l3afd.pid  | file used for stroing process id's|
+|pid-file| `"l3afd.pid"`  |It contains process id of eBPF Programs |
+|datacenter| `"dummy"` | name of DataCenter|
+
 
 
 
