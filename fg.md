@@ -31,8 +31,8 @@ environment: PROD
 | FieldName     | Example       | Description     |
 | ------------- | ------------- | --------------- |
 |pid-file| `"l3afd.pid"`  |It contains process id of eBPF Programs |
-|datacenter| `"dummy"` | name of DataCenter|
-
+|datacenter| `"dummy"` | Name of DataCenter|
+|bpf-dir| `"/dev/shm"` | Absolute Path of eBPF Programs (where they are extracted) |
 
 
 
