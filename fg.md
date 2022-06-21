@@ -1,6 +1,6 @@
 # L3AFD Config  Options Documentation
 
-See [l3afd.cfg](https://github.com/l3af-project/l3afd/config/l3afd.cfg) for a full example configuration.
+See [l3afd.cfg](https://github.com/l3af-project/l3afd/blob/main/config/l3afd.cfg) for a full example configuration.
 
 
 ```
