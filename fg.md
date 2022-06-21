@@ -1,6 +1,6 @@
 # L3AFD Configuration Options Documentation
      The Configuration File : l3afd.cfg
-     `[DEFAULT]
+     ```[DEFAULT]
 
 [l3afd]
 pid-file: ./l3afd.pid
@@ -70,5 +70,5 @@ cert-dir: /etc/l3af/certs
 cacert-filename: ca.pem
 server-crt-filename: server.crt
 server-key-filename: server.key
-`
+```
      
