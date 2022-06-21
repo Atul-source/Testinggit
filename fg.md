@@ -1,8 +1,9 @@
 # L3AFD Configuration Options Documentation
      The Configuration File : l3afd.cfg
-     ```
- [DEFAULT]
- [l3afd]
+     ~~~ 
+     [DEFAULT]
+
+[l3afd]
 pid-file: ./l3afd.pid
 datacenter: dummy
 bpf-dir: /dev/shm
@@ -70,5 +71,5 @@ cert-dir: /etc/l3af/certs
 cacert-filename: ca.pem
 server-crt-filename: server.crt
 server-key-filename: server.key
-```
+~~~
      
