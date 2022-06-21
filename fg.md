@@ -1,1 +1,1 @@
-# L3AFD Configuration Options Docuementations
+# L3AFD Configuration Options Documentation
