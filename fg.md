@@ -27,6 +27,10 @@ environment: PROD
 
 ### Below is the detailed documentation for each field
 
-field name |            example                 | description 
+
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|pid-file| l3afd.pid  | file used for stroing process id's|
+
 
 
