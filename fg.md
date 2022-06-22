@@ -70,12 +70,49 @@ environment: PROD
 ## [xdp-root-program]
 | FieldName     | Example       | Description     |
 | ------------- | ------------- | --------------- |
-|name|`"xdp-root"`|Name of xdp-root program|
-|artifact|`"xdp-root.tar.gz"`|Archive of xdp-root program|
-|ingress-map-name|`"root_array"`|Ingress map name of xdp-root program|
-|command|`"xdp-root"`|Command to run xdp-root program|
-|version|`"1.01"`|Version of xdp-root-program|
-|is-user-program|`"false"`|boolean to check xdp-root is kernel space or user space program|
+|name|`"xdp_root"`|Name of xdp_root program|
+|artifact|`"xdp-root.tar.gz"`|Archive of xdp_root program|
+|ingress-map-name|`"root_array"`|Ingress map name of xdp_root program|
+|command|`"xdp_root"`|Command to run xdp_root program|
+|version|`"1.01"`|Version of xdp_root program|
+|is-user-program|`"false"`|boolean to check xdp_root is kernel space or user space program|
+
+## [tc-root-program]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|name|`"tc_root"`|Name of tc_root program|
+|artifact|`"l3af_tc_root.tar.gz"`|Archive of tc_root program|
+|ingress-map-name|`"tc_ingress_root_array"`|Ingress map name of tc_root program|
+|egress-map-name|`"tc_egress_root_array"`|Egress map name of tc_root program|
+|command|`"tc_root"`|Command to run tc_root program|
+|version|`"1.0"`|Version of tc_root program|
+|is-user-program|`"false"`|boolean to check tc_root is kernel space or user space program|
+
+## [ebpf-chain-debug]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|addr|`"0.0.0.0:8899"`|address of ebpf chain debuging|
+|enabled|`"true"`|boolean to check ebpf-chain-debuging is enabled or not|
+
+## [l3af-configs]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|restapi-addr|`"localhost:53000"`| address of l3af-configs |
+
+# [l3af-config-store]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|filename|`"/etc/l3afd/l3af-config.json"`|Absolute path of persistent config file|
+
+# [mtls]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|enabled| `"true"` | boolean to check mtls enabled or not|
+|min-tls-version|`""`| min tls version allowed|
+|cert-dir|`"/etc/l3af/certs"`|Absolute path of ca certificates |
+|server-crt-filename|`"server.crt"`|server's ca certificate filename|
+|server-key-filename|`"server.key"`|server's key filename|
+
 
 
 
