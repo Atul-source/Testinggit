@@ -45,7 +45,8 @@ environment: PROD
 |bpf-delay-time|`"5"`|Todo|
 |swagger-api-enabled|`"false"`|Boolean to check swagger api enable or not|
 |environment|`"PROD"`| Environment  variable |
-
+|BpfMapDefaultPath|`"/sys/fs/bpf"`|It is a base path for storing bpf maps|
+|TcMapsRelativePath|`"tc/globals"`|It is a relative path of tc maps with respect to BpfMapDefaultPath|
 ## [kf-repo]
 | FieldName     | Example       | Description     |
 | ------------- | ------------- | --------------- |
