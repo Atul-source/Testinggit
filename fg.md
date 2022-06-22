@@ -33,6 +33,11 @@ environment: PROD
 |pid-file| `"l3afd.pid"`  |It contains process id of eBPF Programs |
 |datacenter| `"dummy"` | Name of DataCenter|
 |bpf-dir| `"/dev/shm"` | Absolute Path of eBPF Programs (where they are extracted) |
+|bpf-log-dir|`""`      | Absolute Path where we store logs eBPF Programs|
+|kernel-major-version|`"4"`|Major version of kernel|
+|kernel-minor-version|`"15"`|Miner version of kernel (Ex 4.15)|
+|shutdown-timeout|`"1s"`|It is the amount of time allowed to stop all network functions|
+|http-client-timeout|`"10s"`|It is the amount of time allowed to get response headers|
 
 
 
