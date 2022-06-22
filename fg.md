@@ -46,4 +46,37 @@ environment: PROD
 |swagger-api-enabled|`"false"`|boolean to check swagger api enable or not|
 |environment|`"PROD"`| environment  variable |
 
+## [kf-repo]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|url| `"http://localhost:8000/"`|Default Repository to Download eBPF Programs|
+
+## [web]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|metrics-addr|`"0.0.0.0:8898"`|Prometheus endpoint for pull/scrape the metrics|
+|kf-poll-interval|`"30s"`|Periodic Interval to scrape metrics using Prometheus|
+|n-metric-samples|`"20"`|Number of Metric Samples|
+
+## [admind]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|host|`""`|Hostname of admin|
+|username|`""`|Username of admin|
+|api-key|`""`|Api key of admin|
+|groud-id|`"0"`|Group id of admin|
+|api-enabled|`"true"`|boolean to check api enabled or not|
+
+## [xdp-root-program]
+| FieldName     | Example       | Description     |
+| ------------- | ------------- | --------------- |
+|name|`"xdp-root"`|Name of xdp-root program|
+|artifact|`"xdp-root.tar.gz"`|Archive of xdp-root program|
+|ingress-map-name|`"root_array"`|Ingress map name of xdp-root program|
+|command|`"xdp-root"`|Command to run xdp-root program|
+|version|`"1.01"`|Version of xdp-root-program|
+|is-user-program|`"false"`|boolean to check xdp-root is kernel space or user space program|
+
+
+
 
