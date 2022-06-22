@@ -28,6 +28,7 @@ environment: PROD
 ### Below is the detailed documentation for each field
 
 
+## [l3afd]
 | FieldName     | Example       | Description     |
 | ------------- | ------------- | --------------- |
 |pid-file| `"l3afd.pid"`  |It contains process id of eBPF Programs |
@@ -38,6 +39,11 @@ environment: PROD
 |kernel-minor-version|`"15"`|Miner version of kernel (Ex 4.15)|
 |shutdown-timeout|`"1s"`|It is the amount of time allowed to stop all network functions|
 |http-client-timeout|`"10s"`|It is the amount of time allowed to get response headers|
-
+|max-nf-restart-count|`"3"`|maximum number of attempts to monitor eBPF Program|
+|max-nfs-attach-count|`"10"`| Todo|
+|bpf-chaining-enabled|`"true"`|boolean to set bpf-chaining |
+|bpf-delay-time|`"5"`|Todo|
+|swagger-api-enabled|`"false"`|boolean to check swagger api enable or not|
+|environment|`"PROD"`| environment  variable |
 
 
