@@ -112,6 +112,7 @@ environment: PROD
 |cert-dir|`"/etc/l3af/certs"`|Absolute path of ca certificates |
 |server-crt-filename|`"server.crt"`|Server's ca certificate filename|
 |server-key-filename|`"server.key"`|Server's key filename|
+|cert-expiry-warning-days|`"30"`|How many days before expiry you want warning|
 
 
 
