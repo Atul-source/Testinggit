@@ -40,9 +40,7 @@ environment: PROD
 |shutdown-timeout|`"1s"`|It is the amount of time allowed to stop all network functions|
 |http-client-timeout|`"10s"`|It is the amount of time allowed to get response headers|
 |max-nf-restart-count|`"3"`|Maximum number of attempts to monitor eBPF Program|
-|max-nfs-attach-count|`"10"`| Todo|
 |bpf-chaining-enabled|`"true"`|Boolean to set bpf-chaining |
-|bpf-delay-time|`"5"`|Todo|
 |swagger-api-enabled|`"false"`|Boolean to check swagger api enable or not|
 |environment|`"PROD"`| Environment  variable |
 |BpfMapDefaultPath|`"/sys/fs/bpf"`|It is a base path for storing bpf maps|
@@ -71,12 +69,12 @@ environment: PROD
 ## [xdp-root-program]
 | FieldName     | Example       | Description     |
 | ------------- | ------------- | --------------- |
-|name|`"xdp_root"`|Name of xdp_root program|
-|artifact|`"xdp-root.tar.gz"`|Archive of xdp_root program|
-|ingress-map-name|`"root_array"`|Ingress map name of xdp_root program|
-|command|`"xdp_root"`|Command to run xdp_root program|
-|version|`"1.01"`|Version of xdp_root program|
-|is-user-program|`"false"`|Boolean to check xdp_root is kernel space or user space program|
+|name|`"xdp-root"`|Name of xdp-root program|
+|artifact|`"xdp-root.tar.gz"`|Archive of xdp-root program|
+|ingress-map-name|`"root_array"`|Ingress map name of xdp-root program|
+|command|`"xdp_root"`|Command to run xdp-root program|
+|version|`"1.01"`|Version of xdp-root program|
+|is-user-program|`"false"`|Boolean to check xdp-root is kernel space or user space program|
 
 ## [tc-root-program]
 | FieldName     | Example       | Description     |
